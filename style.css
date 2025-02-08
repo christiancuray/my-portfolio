@@ -1,4 +1,3 @@
-/*@import url("https://fonts.googleapis.com/css2?family=Liter&family=Lora:ital,wght@0,400..700;1,400..700&family=Madimi+One&display=swap");*/
 :root {
   font-family: Inter, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
@@ -8,6 +7,7 @@
     font-family: InterVariable, sans-serif;
   }
 }
+
 * {
   padding: 0;
   margin: 0;
@@ -136,7 +136,7 @@
 
 .card img {
   width: 100%;
-  height: 120px;
+  height: 200px;
   object-fit: cover;
 }
 
