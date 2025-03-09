@@ -1,21 +1,27 @@
-import projectsData from "./projectsData.js";
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("projectsData.json")
+    .then((response) => response.json())
+    .then((projectsData) => {
+      const projectsContainer = document.querySelector(".container-cards");
 
-// DOM manipulation for the project cards
-document.addEventListener("DOMContentLoaded", function () {
-  const prjContainer = document.querySelector(".container-cards");
+      projectsData.forEach((project) => {
+        const projectCard = document.createElement("div");
+        projectCard.classList.add("card");
 
-  projectsData.forEach((project) => {
-    const card = document.createElement("div");
-    card.classList.add("card");
+        projectCard.innerHTML = `
+            <img src="${project.image}" alt="${project.title}" />
+            <div class="card-content">
+              <div class="card-title">${project.title}</div>
+              <div class="card-description">${project.description}</div>
+              <a href="${project.github}" class="card-link">
+                View on Github
+                <i class="fas fa-arrow-right" style="font-size: 20px; margin-left: 8px"></i>
+              </a>
+            </div>
+          `;
 
-    card.innerHTML = `
-        <img src="${project.image}" alt="${project.alt}" />
-        <div class="card-content">
-        <div class="card-title">${project.title}</div>
-        <div class="card-description">${project.description}</div>
-        <a href="${project.githubLink}" class="card-link">View on Github</a>
-        </div>
-        `;
-    prjContainer.appendChild(card);
-  });
+        projectsContainer.appendChild(projectCard);
+      });
+    })
+    .catch((error) => console.error("Error loading projects:", error));
 });

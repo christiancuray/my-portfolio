@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Library Management System",
+    "image": "images/restaurant.png",
+    "description": "A database-driven system for managing book transactions and users.",
+    "github": ""
+  },
+  {
+    "id": 2,
+    "title": "Music Web Player",
+    "image": "images/prj1.jpg",
+    "description": "A streaming web app with playlist management.",
+    "github": ""
+  },
+  {
+    "id": 3,
+    "title": "Restaurant Ordering System",
+    "image": "images/prj1.jpg",
+    "description": "An online system for restaurant order management.",
+    "github": ""
+  }
+]
