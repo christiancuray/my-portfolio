@@ -97,6 +97,20 @@
   flex-direction: row;
 }
 
+.tech-stack-section h2 {
+  text-align: center;
+}
+
+.tech-stack-icons {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-size: 4rem;
+}
+
 .third-container {
   padding-top: 50px;
   display: flex;
